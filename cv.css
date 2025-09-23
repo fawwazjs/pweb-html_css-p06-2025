@@ -1,0 +1,129 @@
+body {
+    margin: 0;
+    padding: 20px;
+    background-image: url('img/ghibli_wallpaper.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: Arial, sans-serif;
+    color: #333;
+    line-height: 1.6;
+    min-height: 100dvh;
+}
+
+.cv-container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    margin: 0 0 10px 0;
+    font-size: 2.5em;
+    color: #4a7c59;
+}
+
+header p {
+    font-size: 1.2em;
+    color: #6b8e5a;
+    margin: 0 0 20px 0;
+}
+
+header img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 3px solid #87ceeb;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid #ddd;
+    margin: 30px 0;
+}
+
+section {
+    margin-bottom: 30px;
+}
+
+section h2 {
+    color: #4a7c59;
+    font-size: 1.8em;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #87ceeb;
+    padding-bottom: 5px;
+}
+
+section ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+section li {
+    margin-bottom: 10px;
+}
+
+section a {
+    color: #87ceeb;
+    text-decoration: none;
+}
+
+section a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    .cv-container {
+        padding: 20px;
+    }
+
+    header h1 {
+        font-size: 2em;
+    }
+
+    header p {
+        font-size: 1em;
+    }
+
+    header img {
+        width: 120px;
+        height: 120px;
+    }
+
+    section h2 {
+        font-size: 1.5em;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.8em;
+    }
+
+    header img {
+        width: 100px;
+        height: 100px;
+    }
+
+    section h2 {
+        font-size: 1.3em;
+    }
+
+    section li {
+        font-size: 0.9em;
+    }
+}
