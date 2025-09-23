@@ -1,0 +1,281 @@
+/* --- Color Palette --- */
+:root {
+    --ghibli-sky-blue: #87CEEB; 
+    --ghibli-grass-green: #90EE90; 
+    --ghibli-sun-yellow: #FFD700; 
+    --ghibli-earth-brown: #8B4513; 
+    --ghibli-cloud-white: #F0F8FF; 
+    --ghibli-accent-pink: #FFB6C1; 
+    --ghibli-text-dark: #36454F; 
+    --ghibli-text-light: #F0F8FF;
+    --ghibli-soft-shadow: rgba(0, 0, 0, 0.1);
+  }
+  
+  /* --- Layout --- */
+  .cv-page {
+    background: linear-gradient(to top left, var(--ghibli-accent-pink), var(--ghibli-cloud-white));
+    min-height: 100vh;
+    padding: 2em;
+  }
+  
+  .cv-container {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 2em auto;
+    background-color: var(--ghibli-cloud-white);
+    border-radius: 25px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    animation: fadeInUp 1s ease-out;
+  }
+  
+  /* --- Sidebar --- */
+  .cv-sidebar {
+    flex: 1;
+    min-width: 300px;
+    background-color: var(--ghibli-sky-blue);
+    color: var(--ghibli-text-light);
+    padding: 3em 2em;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5em;
+    animation: slideInLeft 1s ease-out;
+  }
+  
+  .cv-photo-wrapper {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-bottom: 1em;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+    animation: pulseIn 1.5s ease-out;
+  }
+  
+  .cv-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    transition: transform 0.4s ease;
+  }
+  
+  .cv-photo:hover {
+    transform: scale(1.08) rotate(2deg);
+  }
+  
+  .cv-sidebar h2 {
+    font-size: 2.5em;
+    color: var(--ghibli-text-light);
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+  }
+  
+  .cv-sidebar .cv-title {
+    font-size: 1.2em;
+    color: var(--ghibli-cloud-white);
+    margin-top: -0.5em;
+    margin-bottom: 1em;
+    font-weight: 400;
+  }
+  
+  /* --- Contact + Skills --- */
+  .contact-info, .skills-info {
+    width: 100%;
+    text-align: left;
+    margin-bottom: 2em;
+  }
+  
+  .contact-info h3, .skills-info h3 {
+    color: var(--ghibli-sun-yellow);
+    font-size: 1.6em;
+    margin-bottom: 1em;
+    border-bottom: 2px solid var(--ghibli-sun-yellow);
+    padding-bottom: 0.5em;
+  }
+  
+  .contact-info ul, .skills-info ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .contact-info ul li {
+    display: flex;
+    align-items: center;
+    gap: 0.8em;
+    margin-bottom: 0.8em;
+    font-size: 1.1em;
+    color: var(--ghibli-cloud-white);
+  }
+  
+  .skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.7em;
+    margin-top: 1em;
+  }
+  
+  .skills-list li {
+    background-color: var(--ghibli-sun-yellow);
+    color: var(--ghibli-earth-brown);
+    padding: 0.6em 1.2em;
+    border-radius: 20px;
+    font-size: 0.95em;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    animation: bounceIn 0.8s ease forwards;
+  }
+  
+  .skills-list li:hover {
+    background-color: var(--ghibli-accent-pink);
+    color: var(--ghibli-cloud-white);
+    transform: scale(1.1) rotate(-3deg);
+  }
+  
+  /* --- Main Content --- */
+  .cv-main-content {
+    flex: 2;
+    min-width: 450px;
+    padding: 3em;
+    background-color: var(--ghibli-cloud-white);
+    animation: slideInRight 1s ease-out;
+  }
+  
+  .cv-section {
+    margin-bottom: 3em;
+    position: relative;
+    padding-left: 20px;
+    animation: fadeInUp 1s ease-out;
+  }
+  
+  .cv-section::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 5px;
+    height: 100%;
+    background-color: var(--ghibli-grass-green);
+    border-radius: 5px;
+  }
+  
+  .cv-section h3 {
+    font-size: 2em;
+    color: var(--ghibli-sky-blue);
+    margin-bottom: 1em;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.05);
+  }
+  
+  .experience-item, .education-item {
+    margin-bottom: 1.5em;
+    border-left: 3px dashed var(--ghibli-accent-pink);
+    padding-left: 1.5em;
+    position: relative;
+    animation: fadeInUp 1s ease-out;
+  }
+  
+  .experience-item::before, .education-item::before {
+    content: '';
+    position: absolute;
+    left: -8px;
+    top: 5px;
+    width: 15px;
+    height: 15px;
+    background-color: var(--ghibli-sun-yellow);
+    border-radius: 50%;
+    border: 2px solid var(--ghibli-earth-brown);
+  }
+  
+  .experience-item h4 {
+    font-size: 1.4em;
+    color: var(--ghibli-earth-brown);
+    margin-bottom: 0.3em;
+  }
+  
+  .duration {
+    font-style: italic;
+    color: #666;
+    margin-bottom: 0.8em;
+    display: block;
+  }
+  
+  .awards-list {
+    list-style: none;
+    margin-left: 0;
+  }
+  
+  .awards-list li {
+    background-color: var(--ghibli-cloud-white);
+    border: 1px solid var(--ghibli-accent-pink);
+    border-radius: 10px;
+    padding: 0.8em 1.2em;
+    margin-bottom: 0.7em;
+    display: flex;
+    align-items: center;
+    gap: 0.8em;
+    transition: all 0.3s ease;
+  }
+  
+  .awards-list li:hover {
+    background-color: var(--ghibli-accent-pink);
+    color: var(--ghibli-cloud-white);
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* --- Back Button --- */
+  .back-to-home-btn {
+    display: inline-block;
+    margin-top: 2em;
+    padding: 0.8em 1.5em;
+    background-color: var(--ghibli-sun-yellow);
+    color: var(--ghibli-earth-brown);
+    border-radius: 30px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    animation: fadeIn 1.5s ease-out;
+  }
+  
+  .back-to-home-btn:hover {
+    background-color: var(--ghibli-accent-pink);
+    color: var(--ghibli-cloud-white);
+    transform: scale(1.1);
+  }
+  
+  /* --- Animations --- */
+  @keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
+  @keyframes slideInLeft {
+    from { opacity: 0; transform: translateX(-50px); }
+    to { opacity: 1; transform: translateX(0); }
+  }
+  
+  @keyframes slideInRight {
+    from { opacity: 0; transform: translateX(50px); }
+    to { opacity: 1; transform: translateX(0); }
+  }
+  
+  @keyframes pulseIn {
+    0% { transform: scale(0.8); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+  }
+  
+  @keyframes bounceIn {
+    0% { transform: scale(0.3); opacity: 0; }
+    50% { transform: scale(1.1); opacity: 1; }
+    70% { transform: scale(0.9); }
+    100% { transform: scale(1); }
+  }
+  

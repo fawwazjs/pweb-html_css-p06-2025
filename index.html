@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hayao Miyazaki - Storyteller & Director</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="navbar">
+        <nav>
+            <ul>
+                <li><a href="#intro">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="cvv.html">CV</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="intro" class="intro-section">
+        <div class="video-background">
+            <video autoplay muted loop id="ghibliVideo">
+                <source src="assets/intro.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <div class="intro-content">
+            <h1>Hayao Miyazaki</h1>
+            <p class="subtitle">Storyteller & Director</p>
+            <div class="sparkle-animation"></div>
+            <div class="intro-buttons">
+                <a href="#about" class="btn scroll-btn">ABOUT</a>
+                <a href="#projects" class="btn scroll-btn">PROJECTS</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about-section">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-image-wrapper">
+                    <img src="assets/hayaom.png" alt="Hayao Miyazaki" class="about-image">
+                </div>
+                <div class="about-text">
+                    <h2>About Me</h2>
+                    <p>Hayao Miyazaki is a visionary Japanese animation director, producer, screenwriter, animator, author, and manga artist. He is the co-founder of Studio Ghibli, a renowned animation studio that has produced some of the most acclaimed and beloved animated films of all time.</p>
+                    <p>Born in Tokyo, Miyazaki's works often explore themes of environmentalism, pacifism, childhood, and the complexities of human nature, all presented through stunning visuals and rich storytelling. His distinctive animation style and imaginative worlds have garnered him international recognition and numerous awards, including an Academy Award for Best Animated Feature.</p>
+                    <p>From the magical adventures of "Spirited Away" to the ecological fable of "Princess Mononoke," Miyazaki's films resonate deeply with audiences of all ages, leaving a lasting impact on cinema and inspiring generations of animators and storytellers.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="projects-section">
+        <div class="container">
+            <h2>Hayao's Projects</h2>
+            <div class="projects-grid">
+                <div class="project-item">
+                    <img src="assets/howl.gif" alt="Howl's Moving Castle GIF">
+                    <h3>Howl's Moving Castle</h3>
+                    <div class="project-overlay">
+                        <p>A young woman is cursed with an old body by a spiteful witch and seeks out a magical moving castle to break the spell.</p>
+                    </div>
+                </div>
+                <div class="project-item">
+                    <img src="assets/ponyo.gif" alt="Ponyo GIF">
+                    <h3>Ponyo</h3>
+                    <div class="project-overlay">
+                        <p>A goldfish princess yearns to be human and befriends a young boy named Sosuke.</p>
+                    </div>
+                </div>
+                <div class="project-item">
+                    <img src="assets/spirit.gif" alt="Spirited Away GIF">
+                    <h3>Spirited Away</h3>
+                    <div class="project-overlay">
+                        <p>During her family's move to the suburbs, a sullen 10-year-old girl wanders into a world ruled by gods, witches, and spirits.</p>
+                    </div>
+                </div>
+                <div class="project-item">
+                    <img src="assets/kiki.gif" alt="Kiki's Delivery Service GIF">
+                    <h3>Kiki's Delivery Service</h3>
+                    <div class="project-overlay">
+                        <p>A young witch, on her mandatory year of independent living, finds her place in a new city as a delivery service.</p>
+                    </div>
+                </div>
+                <div class="project-item">
+                    <img src="assets/arriety.gif" alt="Arriety GIF">
+                    <h3>The Secret World of Arrietty</h3>
+                    <div class="project-overlay">
+                        <p>A tiny, 14-year-old borrower forges an unexpected friendship with a human boy.</p>
+                    </div>
+                </div>
+                <div class="project-item">
+                    <img src="assets/totoro.gif" alt="My Neighbor Totoro GIF">
+                    <h3>My Neighbor Totoro</h3>
+                    <div class="project-overlay">
+                        <p>Two young girls encounter magical creatures in the forest near their new home.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Hayao Miyazaki. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.querySelectorAll('.navbar a, .intro-buttons .scroll-btn').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                if (this.getAttribute('href').startsWith('#')) {
+                    e.preventDefault();
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+       
+    </script>
+</body>
+</html>
